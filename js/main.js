@@ -327,7 +327,7 @@ function init() {
             style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
         },
         scaleControl: true,
-        scrollwheel: true,
+        scrollwheel: false,
         panControl: true,
         streetViewControl: true,
         draggable : true,
@@ -345,7 +345,7 @@ function init() {
         	{ "featureType": "road.arterial", "elementType": "labels.text", "stylers": [ { "visibility": "on" } ] },
         	{ "featureType": "road.local", "elementType": "labels.text", "stylers": [ { "visibility": "on" } ] },{ } ],
     }
-    var mapElement = document.getElementById('googleMap');
+    var mapElement = document.getElementById('google-map');
     var map = new google.maps.Map(mapElement, mapOptions);
     var locations = [
 		['Spot 1', 'This is spot 1. Blah blah. #this #that', 'undefined', 'undefined', 'undefined', 45.5136190, -122.6520430, 'img/fontina.png'],

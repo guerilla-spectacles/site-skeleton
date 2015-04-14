@@ -1,37 +1,93 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,800);
 body {
-  /*background-color: #16a085;*/
+  background-color: #00BEC6;
   font-family: 'Open Sans', sans-serif; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 h1 {
   text-align: center;
   color: white; }
 
+.center {
+  margin-left: auto;
+  margin-right: auto; }
+
 #logo {
   display: block;
   width: 200px;
-  margin: 20px auto; 
-  text-align: center;
-}
+  margin: 20px auto;
+  text-align: center; }
+
+#google-map {
+  width: 90%;
+  height: 600px; }
 
 .info-dropdown {
-  display: inline-block;
+  width: 90%;
+  height: 600px;
+  overflow: scroll;
+  padding: 50px;
   margin: auto;
   text-align: center;
-}
+  background-color: white; }
 
-.page-ingo {
-  text-align: center;
-}
+#buttons {
+  width: 90%;
+  margin: 20px auto;
+  text-align: center; }
+
+#info-contents {
+  width: 100%; }
+
+.button-container {
+  display: inline-block;
+  margin: 10px 30px; }
 
 button {
-  height: 30px;
+  height: 40px;
   border: 0;
-  background-color: #4272db;
+  background-color: #FFFFFB;
   border-radius: 5px;
-  margin: auto;
+  /*margin: 10px auto;*/
+  width: 150px;
   color: white;
-}
+  font-size: 20px;
+  line-height: 30px;
+  margin: auto;
+  /*padding: 10px;*/ }
+
+.hidden {
+  display: none; }
+
+.infoWindow {
+  background-color: red;
+  font-size: 16px;
+  text-align: center; }
+
+/*Guide*/
+#guide-button {
+  color: #7CA700; }
+
+#guide-me-div h2 {
+  color: #7CA700; }
+
+/*Add*/
+#add-button {
+  color: #FFA034; }
+
+#add-pic-div h2 {
+  color: #FFA034; }
+
+/*About*/
+#about-button {
+  color: #69E2DD; }
+
+#about-div h2 {
+  color: #69E2DD; }
 
 /*
 #googleMap {
@@ -48,27 +104,9 @@ button {
 	font-size: 10px;
 }
 */
-
-#markerLayer img {
-  border: 2px solid red !important;
-  border-radius: 5px;
-}
-
-.infoWindow {
-	background-color:red;
-	font-size: 16px;
-	text-align: center;
-}
-
-#googleMap {
-  height: 600px;
-  width: 90vw;
-  margin: auto; }
-
 .gm-style-iw * {
   display: block;
-  width: 200px; 
-}
+  width: 100%; }
 
 .gm-style-iw h4, .gm-style-iw p {
   margin: 0;
@@ -76,5 +114,9 @@ button {
 
 .gm-style-iw a {
   color: #4272db; }
+
+#markerLayer img {
+  border: 2px solid red !important;
+  border-radius: 5px; }
 
 /*# sourceMappingURL=main.css.map */

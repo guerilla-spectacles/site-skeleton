@@ -1,8 +1,22 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,800);
 
+$blue: #00BEC6;
+$dark-blue: #004860;
+$light-blue: #69E2DD;
+$dark-orange: #FFA034;
+$light-orange: #FCCF7A;
+$light-green: #B0BF1C;
+$dark-green: #7CA700;
+
 body {
-	background-color: #16a085;
+	background-color: $blue;
 	font-family: 'Open Sans', sans-serif;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 h1 {
@@ -10,24 +24,109 @@ h1 {
 	color: white;
 }
 
-#world {
-	display: block;
-	width: 10%;
-	color: red;
-	margin: auto;
+.center {
+    margin-left: auto;
+    margin-right: auto;
 }
+
+#logo {
+  display: block;
+  width: 200px;
+  margin: 20px auto; 
+  text-align: center;
+}
+
+#google-map {
+    width: 90%;
+    height:600px;
+}
+
+.info-dropdown {
+    width: 90%;
+    height: 600px;
+    overflow: scroll;
+    padding: 50px;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+}
+
+#buttons {
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#info-contents {
+    width: 100%;
+}
+
+.button-container {
+    display: inline-block;
+    margin: 10px 30px;
+}
+
+button {
+  height: 40px;
+  border: 0;
+  background-color: #FFFFFB;
+  border-radius: 5px;
+  /*margin: 10px auto;*/
+  width: 150px;
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+  margin: auto;
+  /*padding: 10px;*/
+}
+
+.hidden {
+    display: none;
+}
+
+.infoWindow {
+    background-color:red;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+/*Guide*/
+#guide-button {
+    color: $dark-green;
+}
+#guide-me-div {
+    h2 {
+        color: $dark-green;
+    }
+}
+
+/*Add*/
+#add-button {
+    color: $dark-orange;
+}
+#add-pic-div {
+    h2 {
+        color: $dark-orange;
+    }
+}
+
+/*About*/
+#about-button {
+    color: $light-blue;
+}
+#about-div {
+    h2 {
+        color: $light-blue
+    }
+}
+
+
 /*
 #googleMap {
 	border: 1px solid #1abc9c;
 	margin: auto;
 }*/
-
-.gm-style {
-
-}
-
-
-
 
 /*img {
 	max-width: 150px;
@@ -40,19 +139,24 @@ h1 {
 	font-size: 10px;
 }
 */
-    #googleMap {
-        height:600px;
-        width: 90vw;
-        margin: auto;
-    }
-    .gm-style-iw * {
-        display: block;
-        width: 100%;
-    }
-    .gm-style-iw h4, .gm-style-iw p {
-        margin: 0;
-        padding: 0;
-    }
-    .gm-style-iw a {
-        color: #4272db;
-    }
+
+.gm-style {
+
+}
+
+.gm-style-iw * {
+    display: block;
+    width: 100%;
+}
+.gm-style-iw h4, .gm-style-iw p {
+    margin: 0;
+    padding: 0;
+}
+.gm-style-iw a {
+    color: #4272db;
+}
+
+#markerLayer img {
+  border: 2px solid red !important;
+  border-radius: 5px;
+}
