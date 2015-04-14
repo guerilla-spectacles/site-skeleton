@@ -1,5 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,800);
 body {
+  margin: 0;
+  padding: 0;
   background-color: #00BEC6;
   font-family: 'Open Sans', sans-serif; }
 
@@ -9,25 +11,27 @@ body {
   box-sizing: border-box; }
 
 h1 {
-  text-align: center;
+  margin: 0;
   color: white; }
 
 .center {
   margin-left: auto;
   margin-right: auto; }
 
-#logo {
-  display: block;
-  width: 200px;
-  margin: 20px auto;
-  text-align: center; }
+header {
+  padding: 10px 20px;
+  height: 70px;
+  background-color: #004860; }
+
+.small-map {
+  width: 70% !important; }
 
 #google-map {
-  width: 90%;
-  height: 600px; }
+  width: 100%;
+  height: 600px;
+  display: inline-block; }
 
 .info-dropdown {
-  width: 90%;
   height: 600px;
   overflow: scroll;
   padding: 50px;
@@ -35,30 +39,37 @@ h1 {
   text-align: center;
   background-color: white; }
 
-#buttons {
-  width: 90%;
-  margin: 20px auto;
-  text-align: center; }
-
 #info-contents {
-  width: 100%; }
+  width: 30%;
+  display: inline;
+  float: right; }
+
+#logo {
+  width: 50%;
+  float: left; }
+
+#buttons {
+  margin: 10px 10px auto 0;
+  text-align: right;
+  width: 45%;
+  float: right;
+  display: inline-block; }
 
 .button-container {
   display: inline-block;
-  margin: 10px 30px; }
+  margin: auto 10px; }
 
 button {
-  height: 40px;
   border: 0;
-  background-color: #FFFFFB;
-  border-radius: 5px;
-  /*margin: 10px auto;*/
-  width: 150px;
+  background-color: #004860;
+  /*border-radius: 5px;*/
+  /*width: 150px;*/
   color: white;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  /*line-height: 30px;*/
   margin: auto;
-  /*padding: 10px;*/ }
+  /*padding: 10px;*/
+  padding: 0; }
 
 .hidden {
   display: none; }
@@ -69,23 +80,23 @@ button {
   text-align: center; }
 
 /*Guide*/
-#guide-button {
-  color: #7CA700; }
-
+/*#guide-button {
+    color: $dark-green;
+}*/
 #guide-me-div h2 {
   color: #7CA700; }
 
 /*Add*/
-#add-button {
-  color: #FFA034; }
-
+/*#add-button {
+    color: $dark-orange;
+}*/
 #add-pic-div h2 {
   color: #FFA034; }
 
 /*About*/
-#about-button {
-  color: #69E2DD; }
-
+/*#about-button {
+    color: $light-blue;
+}*/
 #about-div h2 {
   color: #69E2DD; }
 
