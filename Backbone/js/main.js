@@ -26,9 +26,7 @@
 //         infoWindowVisible(false);
 //     });
 // }
-}
 
-*/
 $(function(){
     curiousMap = new scoutMap()
 });
