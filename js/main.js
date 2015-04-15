@@ -308,7 +308,7 @@ console.log('butt!!')
 
 
 
-
+/*  Commenting out Jahsies original map
 google.maps.event.addDomListener(window, 'load', init);
 var map;
 
@@ -402,5 +402,10 @@ function bindInfoWindow(marker, map, title, desc, telephone, email, web, link) {
     });
 }
 }
-
+ */
 console.log('butt')
+$(function(){
+  locationMap = new scoutMap();
+//  Uncomment below to add buttonClicks back in  
+//  buttonClicks = new UpdateButton();
+})
