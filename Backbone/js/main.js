@@ -98,8 +98,8 @@ function init() {
 //     });
 // }
 }
-*/
 
+*/
 $(function(){
     curiousMap = new scoutMap()
 });
