@@ -57,7 +57,7 @@ var scoutMap = Backbone.Model.extend({
 
 })
 
-/*
+
 var scoutMapView = Backbone.View.extend({
 	model: this.model,
 	events: {
@@ -66,7 +66,7 @@ var scoutMapView = Backbone.View.extend({
 	},
 	placeMarker: function(){
 		console.log('heres a click');
-  	/*	var moveMarker = new google.maps.Marker({
+  		var moveMarker = new google.maps.Marker({
     		position: location,
     		map: map,
   		});
@@ -77,4 +77,4 @@ var scoutMapView = Backbone.View.extend({
 
 
 })
-*/
+
