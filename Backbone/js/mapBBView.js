@@ -19,43 +19,73 @@ var scoutMap = Backbone.Model.extend({
 	},
 
 	render: function(){
-  var myIcon='https://mapbuildr.com/assets/img/markers/hollow-pin-black.png';
-		var mapProp = {
-		    center:new google.maps.LatLng(45.517534,-122.648507),
-		    zoom:14,
-	        zoomControl: true,
-	        zoomControlOptions: {
-	            style: google.maps.ZoomControlStyle.DEFAULT,
-	        },
-	        disableDoubleClickZoom: true,
-	        mapTypeControl: true,
-	        mapTypeControlOptions: {
-	            style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
-	        },
-	        scaleControl: true,
-	        scrollwheel: false,
-	        panControl: true,
-	        streetViewControl: true,
-	        draggable : true,
-	        overviewMapControl: false,
-	        overviewMapControlOptions: {
-	            opened: false,
-	        },
-			mapTypeId:google.maps.MapTypeId.ROADMAP,
-        	styles: [ 
-        	{ "stylers": [ { "saturation": -100 } ] },
-        	{ "featureType": "water", "elementType": "geometry.fill", "stylers": [ { "color": "#0099dd" } ] },
-        	{ "elementType": "labels", "stylers": [ { "visibility": "off" } ] },
-        	{ "featureType": "poi.park", "elementType": "geometry.fill", "stylers": [ { "color": "#aadd55" } ] },
-        	{ "featureType": "road.highway", "elementType": "labels", "stylers": [ { "visibility": "on" } ] },
-        	{ "featureType": "road.arterial", "elementType": "labels.text", "stylers": [ { "visibility": "on" } ] },
-        	{ "featureType": "road.local", "elementType": "labels.text", "stylers": [ { "visibility": "on" } ] },{ } ],
-
+  		var myIcon='https://mapbuildr.com/assets/img/markers/hollow-pin-black.png';
+			var mapProp = {
+			    //center:new google.maps.LatLng(45.517534,-122.648507),
+			    zoom:14,
+		        zoomControl: true,
+		        zoomControlOptions: {
+		            style: google.maps.ZoomControlStyle.DEFAULT,
+		        },
+		        disableDoubleClickZoom: true,
+		        mapTypeControl: true,
+		        mapTypeControlOptions: {
+		            style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+		        },
+		        scaleControl: true,
+		        scrollwheel: false,
+		        panControl: true,
+		        streetViewControl: true,
+		        draggable : true,
+		        overviewMapControl: false,
+		        overviewMapControlOptions: {
+		            opened: false,
+		        },
+				mapTypeId:google.maps.MapTypeId.ROADMAP,
+	        	styles: [ 
+	        	{ "stylers": [ { "saturation": -100 } ] },
+	        	{ "featureType": "water", "elementType": "geometry.fill", "stylers": [ { "color": "#0099dd" } ] },
+	        	{ "elementType": "labels", "stylers": [ { "visibility": "off" } ] },
+	        	{ "featureType": "poi.park", "elementType": "geometry.fill", "stylers": [ { "color": "#aadd55" } ] },
+	        	{ "featureType": "road.highway", "elementType": "labels", "stylers": [ { "visibility": "on" } ] },
+	        	{ "featureType": "road.arterial", "elementType": "labels.text", "stylers": [ { "visibility": "on" } ] },
+	        	{ "featureType": "road.local", "elementType": "labels.text", "stylers": [ { "visibility": "on" } ] },{ } ],
 			};
   		self.map = new google.maps.Map(document.getElementById("google-map"),mapProp);
-	},
+  		//Attempt at Geolocation
+  		 if(navigator.geolocation) {
+    		navigator.geolocation.getCurrentPosition(function(position) {
+    			console.log('grabbing location from nav');
+      		var pos = new google.maps.LatLng(position.coords.latitude,
+            								 position.coords.longitude);		      		
+		      map.setCenter(pos);
+		    }, function() {
+		      handleNoGeolocation(true);
+		    });
+		      } else {
+    // Browser doesn't support Geolocation
+    handleNoGeolocation(false);
+  };
 
-})
+		function handleNoGeolocation(errorFlag) {
+  			if (errorFlag) {
+  				console.log('location found an error');
+			    var content = 'Error: The Geolocation service failed.';
+			  } else {
+			  	console.log('grabbing map from no location');
+			    var content = 'Error: Your browser doesn\'t support geolocation.';
+			  }
+			  var options = {
+			    map: map,
+			    position: new google.maps.LatLng(45.517534,-122.648507),
+			    content: content
+			  };
+			  map.setCenter(options.position);
+      	//end Geolocation	
+		};
+	},	
+
+});
 
 
 var scoutMapView = Backbone.View.extend({
