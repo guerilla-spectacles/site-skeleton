@@ -15,14 +15,10 @@ var Buttons = Backbone.View.extend({
 	popup: function(event){
 		event.preventDefault();
 		var target = $(event.target);
-		var targetID = (target.attr("id") + "-div");
-		console.log($(targetID));
-		//var ellen = document.getElementByID(target + "-div");
-		//console.log(ellen);
+		var targetID = '#' + $(target).attr("id") + "-div";
+		console.log(targetID)
 		$(targetID).toggleClass("hidden");
-		$(targetID).siblings().addClass("hidden");
-		//$("#guide-me-div").addClass("hidden");
-		//$("#about-div").addClass("hidden");
+		($(targetID).siblings()).addClass("hidden");
 	
 
 
