@@ -83,21 +83,21 @@ button {
 /*#guide-button {
     color: $dark-green;
 }*/
-#guide-me-div h2 {
+#guide-button-div h2 {
   color: #7CA700; }
 
 /*Add*/
 /*#add-button {
     color: $dark-orange;
 }*/
-#add-pic-div h2 {
+#add-button-div h2 {
   color: #FFA034; }
 
 /*About*/
 /*#about-button {
     color: $light-blue;
 }*/
-#about-div h2 {
+#about-button-div h2 {
   color: #69E2DD; }
 
 /*
