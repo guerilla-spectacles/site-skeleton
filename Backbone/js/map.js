@@ -1,4 +1,4 @@
-
+//not linked to any page, just copied from google api to check some bracket connections
 var map;
 
 function initialize() {
