@@ -9,17 +9,22 @@ var sidebars = Backbone.View.extend({
 
 		oddity = "<div id=\"guide-button-div\" class=\"info-dropdown center\">\
 			<h2>Closest Curiosties</h2>\
-			<p>\
-				HI HI HI Magnis eros enim cursus. Et cursus adipiscing mauris ut aenean scelerisque tortor, facilisis adipiscing placerat scelerisque auctor platea, arcu in habitasse nunc pellentesque! Ut auctor et ut vel. In magna aliquet non! Ultrices sit sit nunc, enim turpis placerat ultricies dis lacus? Aliquet nec et in integer in ac elit placerat sed magna sagittis scelerisque! Sed! Urna! Egestas turpis hac enim nascetur arcu integer, risus augue sit ultrices facilisis egestas, massa amet, porttitor montes nisi, pulvinar est vut porttitor enim? Tincidunt? Mus, sed platea a etiam eu aliquam ut enim. Etiam risus porttitor adipiscing velit mus, urna dapibus, nec! Natoque placerat, urna, non in magna, nisi elit odio! Vel risus nunc urna mauris urna facilisis et urna facilisis rhoncus integer.\
-			</p>\
+			<div class='curiousProfile'>\
+			<h3>Angst on Angst</h3>\
+			<img class='curious-img' src='./img/jollyRog.jpg'>\
+			<p class='curious-description'>This is a weird and ugly mural of some sort of hipster meta-angst.  #ugly</p>\
+			</div>\
+			<p class='curious-type'>Category:<br>\
+			Art</p>\
 			</div>";
 
 		about = "<div id=\"about-button-div\" class=\"info-dropdown center\">\
 			<h2>About Curious Cities</h2>\
 			<p>\
-				Egestas hac in ultricies? Sagittis montes, phasellus risus, augue! Elementum, dignissim turpis! Duis tincidunt, cum! Diam ac habitasse nisi? Egestas mus vut! Amet lundium adipiscing nec nunc tortor pellentesque duis turpis lorem urna, eros, urna a, ac amet ultrices ac montes sit diam placerat vut sagittis, eu risus, cursus risus, in ut ac porta a, vel et magnis, vut risus odio nunc natoque in, ridiculus nisi, ut porttitor eu? Odio ac magnis duis odio. A. Risus placerat, ridiculus! A amet ultrices eros auctor pellentesque elementum. A elementum sed, pulvinar, vel, et scelerisque, scelerisque? Porta magna cursus, sociis sed? Et, natoque cursus scelerisque ac! Sit et urna odio sagittis amet facilisis! Magna sit cum cras.\
-					Porta et dapibus sagittis pellentesque, sed et mauris pulvinar habitasse porta. Integer nunc risus. Nec, a habitasse sed integer, mauris augue sit, in. Mattis tincidunt, pulvinar, et! Aliquam urna enim in, scelerisque magna! Nec! Aenean amet ut purus amet, ac arcu magnis nunc vel tempor, in enim! Phasellus porttitor, sit. Platea ridiculus mattis dignissim ut ultricies rhoncus ac! Auctor, phasellus nisi enim eros, ultricies magnis tempor mattis platea nisi! Scelerisque cum! Dis ridiculus, nec? Tincidunt! A ultricies dis et! Pulvinar, aliquet etiam enim et porta in pulvinar ut ut? Cum cras, ac. Sit rhoncus, proin? Pulvinar sagittis elementum in, vel non, sed in pid, ac aenean rhoncus, scelerisque a porttitor, dis rhoncus turpis tempor arcu? Cursus urna tincidunt, lundium.\
-					duis turpis lorem urna, eros, urna a, ac amet ultrices ac montes sit diam placerat vut sagittis, eu risus, cursus risus, in ut ac porta a, vel et magnis, vut risus odio nunc natoque in, ridiculus nisi, ut porttitor eu? Odio ac magnis duis odio. A. Risus placerat, ridiculus! A amet ultrices eros auctor pellentesque elementum. A elementum sed, pulvinar, vel, et scelerisque, scelerisque? Porta magna cursus, sociis sed? Et, natoque cursus scelerisque ac! Sit et urna odio sagittis amet facilisis! Magna sit cum cras.\
+				HI HI HI Magnis eros enim cursus. Et cursus adipiscing mauris ut aenean scelerisque tortor, facilisis adipiscing placerat scelerisque auctor platea, arcu in habitasse nunc pellentesque! Ut auctor et ut vel. In magna aliquet non! Ultrices sit sit nunc, enim turpis placerat ultricies dis lacus? Aliquet nec et in integer in ac elit placerat sed magna sagittis scelerisque!\
+			</p>\
+			<p>\
+				Sed! Urna! Egestas turpis hac enim nascetur arcu integer, risus augue sit ultrices facilisis egestas, massa amet, porttitor montes nisi, pulvinar est vut porttitor enim? Tincidunt? Mus, sed platea a etiam eu aliquam ut enim. Etiam risus porttitor adipiscing velit mus, urna dapibus, nec! Natoque placerat, urna, non in magna, nisi elit odio! Vel risus nunc urna mauris urna facilisis et urna facilisis rhoncus integer.\
 			</p>\
 		</div>";
 		

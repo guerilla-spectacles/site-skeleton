@@ -3,11 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<title>Curious Cities</title>
+	<link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
 	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script src="http://maps.googleapis.com/maps/api/js"></script>
-<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js'></script>
-<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js'></script>
+	<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js'></script>
+	<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js'></script>
 	<script src="js/mapBBView.js"></script>
 	<script src="js/markersview.js"></script>
 	<script src="js/buttonView.js"></script>
@@ -19,23 +20,26 @@
 		<div id="logo">
 			<h1>Curious Cities</h1>
 		</div>
-		
+
 		<div id="buttons">
 			<div class="button-container">
 				<button id="add-button">Add an Oddity</button>
 			</div>
+			 <!-- REMOVED UNTIL GUIDE ME OPTION IS AVAILABLE -->
+			
 			<div class="button-container">
-				<button id="guide-button">Guide me!</button>
+			<button id="guide-button">What's Nearby</button>
 			</div>
+			
 			<div class="button-container">
-				<button id="about-button">About</button>
+			<button id="about-button">About</button>
 			</div>
-		</div>
-	</header>
-	<div id="google-map" class="center small-map"></div>
-	<div id="info-contents">
 	</div>
-	<!-- <section id="page-info">
-	-->
-	<!-- </section>--></body>
+</header>
+<div id="google-map" class="center small-map"></div>
+<!-- Figure out if small map class is necessary -->
+<div id="info-contents"></div>
+<!-- <section id="page-info">
+-->
+<!-- </section>--></body>
 </html>
