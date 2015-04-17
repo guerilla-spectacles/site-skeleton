@@ -11,7 +11,7 @@
   html {
     font-size: 16px; } }
 body {
-  background-color: #00BEC6;
+  background-color: #29C2B0;
   font-family: 'Open Sans', sans-serif; }
 
 *, *:before, *:after {
@@ -23,6 +23,12 @@ h1 {
   margin: 0;
   color: white; }
 
+h2 {
+  color: #005A6C; }
+
+p {
+  margin-bottom: .5em; }
+
 .center {
   margin-left: auto;
   margin-right: auto; }
@@ -30,7 +36,7 @@ h1 {
 header {
   height: 10vh;
   padding: 0 2%;
-  background-color: #00BEC6; }
+  background-color: #29C2B0; }
   header div {
     position: relative;
     top: 50%;
@@ -81,6 +87,9 @@ button {
   margin: auto;
   padding: 0; }
 
+button:hover {
+  color: #005A6C; }
+
 .hidden {
   display: none; }
 
@@ -88,40 +97,46 @@ button {
   background-color: red;
   text-align: center; }
 
-#guide-button-div h2 {
-  color: #7CA700; }
-
-#add-button-div h2 {
-  color: #FFA034; }
-
-#about-button-div h2 {
-  color: #69E2DD; }
-
 input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"] {
-  background-color: #69E2DD;
-  text-align: left; }
+  background-color: #B5F8FF;
+  text-align: left;
+  width: 100%;
+  padding: 10px; }
 
 form {
-  line-height: 2em;
-  text-align: left; }
+  line-height: 3em; }
+  form p {
+    margin: 0;
+    line-height: 1.5em; }
   form input[type="text"] {
-    border: none; }
-  form input[type="file"] button {
-    background-color: blue; }
+    border: none;
+    height: 2.5em;
+    border-radius: 5px;
+    margin: 15px auto; }
+  form input[type="file"] {
+    text-align: center; }
+    form input[type="file"] button {
+      background-color: blue; }
+  form textarea {
+    border: none;
+    background-color: #B5F8FF; }
   form #description {
+    padding: 10px;
     width: 100%;
-    height: 5em;
+    height: 6em;
     line-height: 1.5em;
-    vertical-align: top; }
+    vertical-align: top;
+    border-radius: 5px;
+    margin: 15px auto; }
   form select {
     border: none;
-    background-color: #69E2DD; }
+    margin: 15px auto;
+    background-color: #B5F8FF; }
   form input[type="submit"] {
-    background-color: #004860;
+    background-color: #005A6C;
     color: white;
     border: none;
-    border-radius: 5px;
-    margin: 5px 0; }
+    border-radius: 5px; }
   form input[type="file"] {
     color: transparent; }
 

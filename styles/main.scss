@@ -14,14 +14,28 @@
   transform: translateY(-50%);
 }
 
+@mixin border-radius {
+  border-radius: 5px;
+}
+
+@mixin standard-padding {
+  padding: 20px;
+}
+// @include standard-padding;
+
+@mixin standard-margin {
+  margin: 15px auto;
+}
+// @include standard-margin;
+
 /////////// VARIABLES ////////////////
-$blue: #00BEC6;
-$dark-blue: #004860;
-$light-blue: #69E2DD;
-$dark-orange: #FFA034;
-$light-orange: #FCCF7A;
-$light-green: #B0BF1C;
-$dark-green: #7CA700;
+$blue: #00C7DE;
+$dark-blue: #005A6C;
+$light-blue: #B5F8FF;
+$dark-orange: #FFBE04;
+$light-orange: #FFBE04;
+$light-green: #75D1C6;
+$dark-green: #29C2B0;
 
 /////////// GLOBAL  ////////////////
 
@@ -45,7 +59,7 @@ $dark-green: #7CA700;
 /////////// STYLES ////////////////
 
 body {
-	background-color: $blue;
+	background-color: $dark-green;
 	font-family: 'Open Sans', sans-serif;
   // font-size: 13px;;
 }
@@ -59,6 +73,14 @@ h1 {
 	color: white;
 }
 
+h2 {
+  color: $dark-blue;
+}
+
+p {
+  margin-bottom: .5em;
+}
+
 .center {
     margin-left: auto;
     margin-right: auto;
@@ -68,7 +90,7 @@ header {
   // padding: auto 20px;
   height: 10vh;
   @include padding(0 2%);
-  background-color: $blue;
+  background-color: $dark-green;
   div {
 
     @include vertical-align;
@@ -126,6 +148,10 @@ button {
   padding: 0;
 }
 
+button:hover {
+  color: $dark-blue;
+}
+
 .hidden {
     display: none;
 }
@@ -136,38 +162,29 @@ button {
 }
 
 
-////Info-windo panes
-#guide-button-div {
-    h2 {
-        color: $dark-green;
-    }
-}
-
-#add-button-div {
-    h2 {
-        color: $dark-orange;
-    }
-}
-
-#about-button-div {
-    h2 {
-        color: $light-blue
-    }
-}
-
 //////ADD FORM STYLES
 #{$all-text-inputs} {
   background-color: $light-blue;
   text-align: left;
+  width: 100%;
+  padding: 10px;
 }
 
 form {
-  line-height: 2em;
-  text-align: left;
+  line-height: 3em;
+
+  p {
+    margin: 0;
+    line-height: 1.5em;
+  }
   input[type="text"] {
     border: none;
+    height: 2.5em;
+    @include border-radius;
+    @include standard-margin;
   };
   input[type="file"] {
+    text-align: center;
     button {
       background-color: blue;
     }
@@ -175,15 +192,22 @@ form {
   .form-button {
 
   }
-
+  textarea {
+    border: none;
+    background-color: $light-blue;
+  }
   #description {
+    padding: 10px;
     width: 100%;
-    height: 5em;
+    height: 6em;
     line-height: 1.5em;
     vertical-align: top;
+    @include border-radius;
+    @include standard-margin;
   }
   select {
     border: none;
+    @include standard-margin;
     background-color: $light-blue;
   };
 
@@ -191,8 +215,7 @@ form {
     background-color: $dark-blue;
     color: white;
     border: none;
-    border-radius: 5px;
-    margin: 5px 0;
+    @include border-radius;
   };
   input[type="file"] {
     color: transparent;
@@ -229,5 +252,5 @@ form {
 
 #markerLayer img {
   border: 2px solid red !important;
-  border-radius: 5px;
+  @include border-radius;
 }
