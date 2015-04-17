@@ -158,6 +158,45 @@ button {
 //////ADD FORM STYLES
 #{$all-text-inputs} {
   background-color: $light-blue;
+  text-align: left;
+}
+
+form {
+  line-height: 2em;
+  text-align: left;
+  input[type="text"] {
+    border: none;
+  };
+  input[type="file"] {
+    button {
+      background-color: blue;
+    }
+  };
+  .form-button {
+
+  }
+
+  #description {
+    width: 100%;
+    height: 5em;
+    line-height: 1.5em;
+    vertical-align: top;
+  }
+  select {
+    border: none;
+    background-color: $light-blue;
+  };
+
+  input[type="submit"] {
+    background-color: $dark-blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 5px 0;
+  };
+  input[type="file"] {
+    color: transparent;
+  }
 }
 
 /*img {
