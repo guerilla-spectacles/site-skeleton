@@ -1,7 +1,16 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,800);
+@font-face {
+  font-family: "Open-Sans";
+  font-weight: normal;
+  font-style: normal;
+  src: url("http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,800.eot");
+  src: url("http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,800.eot?#iefix") format("embedded-opentype"), url("http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,800.woff") format("woff"), url("http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,800.ttf") format("truetype"), url("http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,800.svg#Open-Sans") format("svg"); }
+@media screen and (min-width: 500px) {
+  html {
+    font-size: 14px; } }
+@media screen and (min-width: 620px) {
+  html {
+    font-size: 16px; } }
 body {
-  margin: 0;
-  padding: 0;
   background-color: #00BEC6;
   font-family: 'Open Sans', sans-serif; }
 
@@ -19,9 +28,15 @@ h1 {
   margin-right: auto; }
 
 header {
-  padding: 10px 20px;
   height: 10vh;
-  background-color: #004860; }
+  padding: 0 2%;
+  background-color: #00BEC6; }
+  header div {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
 
 .small-map {
   width: 70% !important; }
@@ -61,14 +76,9 @@ header {
 
 button {
   border: 0;
-  background-color: #004860;
-  /*border-radius: 5px;*/
-  /*width: 150px;*/
+  background-color: transparent;
   color: white;
-  font-size: 16px;
-  /*line-height: 30px;*/
   margin: auto;
-  /*padding: 10px;*/
   padding: 0; }
 
 .hidden {
@@ -76,35 +86,20 @@ button {
 
 .infoWindow {
   background-color: red;
-  font-size: 16px;
   text-align: center; }
 
-/*Guide*/
-/*#guide-button {
-    color: $dark-green;
-}*/
 #guide-button-div h2 {
   color: #7CA700; }
 
-/*Add*/
-/*#add-button {
-    color: $dark-orange;
-}*/
 #add-button-div h2 {
   color: #FFA034; }
 
-/*About*/
-/*#about-button {
-    color: $light-blue;
-}*/
 #about-button-div h2 {
   color: #69E2DD; }
 
-/*
-#googleMap {
-	border: 1px solid #1abc9c;
-	margin: auto;
-}*/
+input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"] {
+  background-color: #69E2DD; }
+
 /*img {
 	max-width: 150px;
 	border: 20px;

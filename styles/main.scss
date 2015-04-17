@@ -1,5 +1,20 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,800);
+@import "bourbon/bourbon";
+// @import url(http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,800);
 
+//FIGURE OUT font-face
+@include font-face("Open-Sans", "http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,800");
+
+/////////// MIXINS  ////////////////
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/////////// VARIABLES ////////////////
 $blue: #00BEC6;
 $dark-blue: #004860;
 $light-blue: #69E2DD;
@@ -8,17 +23,35 @@ $light-orange: #FCCF7A;
 $light-green: #B0BF1C;
 $dark-green: #7CA700;
 
+/////////// GLOBAL  ////////////////
+
+
+
+
+/////////// MEDIA QUERIES  ////////////////
+@media screen and (min-width: 500px){
+  html{
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 620px){
+  html{
+    font-size: 16px;
+  }
+}
+
+
+/////////// STYLES ////////////////
+
 body {
-  margin: 0;
-  padding: 0;
 	background-color: $blue;
 	font-family: 'Open Sans', sans-serif;
+  // font-size: 13px;;
 }
 
 *, *:before, *:after {
-  -webkit-box-sizing: border-box; 
-  -moz-box-sizing: border-box; 
-  box-sizing: border-box;
+  @include box-sizing(border-box);
 }
 
 h1 {
@@ -32,9 +65,14 @@ h1 {
 }
 
 header {
-  padding: 10px 20px;
+  // padding: auto 20px;
   height: 10vh;
-  background-color: $dark-blue;
+  @include padding(0 2%);
+  background-color: $blue;
+  div {
+
+    @include vertical-align;
+  }
 }
 
 .small-map {
@@ -82,14 +120,9 @@ header {
 
 button {
   border: 0;
-  background-color: $dark-blue;
-  /*border-radius: 5px;*/
-  /*width: 150px;*/
+  background-color: transparent;
   color: white;
-  font-size: 16px;
-  /*line-height: 30px;*/
   margin: auto;
-  /*padding: 10px;*/
   padding: 0;
 }
 
@@ -99,47 +132,33 @@ button {
 
 .infoWindow {
     background-color:red;
-    font-size: 16px;
     text-align: center;
 }
 
 
-/*Guide*/
-/*#guide-button {
-    color: $dark-green;
-}*/
+////Info-windo panes
 #guide-button-div {
     h2 {
         color: $dark-green;
     }
 }
 
-/*Add*/
-/*#add-button {
-    color: $dark-orange;
-}*/
 #add-button-div {
     h2 {
         color: $dark-orange;
     }
 }
 
-/*About*/
-/*#about-button {
-    color: $light-blue;
-}*/
 #about-button-div {
     h2 {
         color: $light-blue
     }
 }
 
-
-/*
-#googleMap {
-	border: 1px solid #1abc9c;
-	margin: auto;
-}*/
+//////ADD FORM STYLES
+#{$all-text-inputs} {
+  background-color: $light-blue;
+}
 
 /*img {
 	max-width: 150px;
