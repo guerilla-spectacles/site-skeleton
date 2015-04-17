@@ -9,7 +9,7 @@ var scoutMap = Backbone.Model.extend({
 		console.log(self.map);
 		var locationFlag = new markersView({map: map});
 		var curiousButtons = new Buttons();
-		//var Sidebar = new sidebars();
+		var StartBar = new sidebars('add');
 		console.log('here is location flag');
 		console.log(locationFlag);
 		console.log(locationFlag.placeMarker);

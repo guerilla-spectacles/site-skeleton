@@ -46,6 +46,7 @@ var sidebars = Backbone.View.extend({
 	},
 
 	render: function(which){
+		$('#info-contents').children().remove();
 		if (which == 'guide'){
 			$('#info-contents').append(oddity)
 		} else if (which == 'add'){
@@ -54,39 +55,6 @@ var sidebars = Backbone.View.extend({
 			$('#info-contents').append(about)
 		};
 
-	},
-
-	popup: function(event){
-		console.log(this);
-		event.preventDefault();
-		$('#info-contents').children().remove();
-		var target = $(event.target);
-		var targetID = $(target).attr("id")
-		//console.log(targetID);
-		if (targetID == 'add-button'){
-			$('#info-contents').append(addLoc);
-			/* Thought this would be a solution, saved just in case
-			saveButton = Backbone.View.extend({
-				el: '#add-button-div',
-				events: {
-					'click #save' : 'save'
-				},
-				initialize: function(){
-					console.log('at initialize in new savebutton');
-				},
-			save: function(event){
-				//event.preventDefault();
-				console.log('yep, got a click');
-				//var photoLoc = $('#photoInput').get(0).files[0];
-				//console.log(photoLoc);
-			},					
-			})*/
-			//$('#photo').addEventListener("click", self.commit);
-		} else if (targetID == 'guide-button'){
-			$('#info-contents').append(oddity);
-		} else if (targetID == 'about-button'){
-			$('#info-contents').append(about);
-		};	
 	},
 
 	save: function(event){
