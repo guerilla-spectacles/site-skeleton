@@ -42,19 +42,6 @@ $dark-green: #29C2B0;
 
 
 
-/////////// MEDIA QUERIES  ////////////////
-@media screen and (min-width: 500px){
-  html{
-    font-size: 14px;
-  }
-}
-
-@media screen and (min-width: 620px){
-  html{
-    font-size: 16px;
-  }
-}
-
 
 /////////// STYLES ////////////////
 
@@ -77,6 +64,10 @@ h2 {
   color: $dark-blue;
 }
 
+h3 {
+  color: $dark-orange;
+}
+
 p {
   margin-bottom: .5em;
 }
@@ -97,9 +88,9 @@ header {
   }
 }
 
-.small-map {
-  width: 70% !important;
-}
+// .small-map {
+//   width: 70% !important;
+// }
 
 #google-map {
     width: 100%;
@@ -108,7 +99,6 @@ header {
 }
 
 .info-dropdown {
-    height: 90vh;
     overflow: scroll;
     padding: 20px 40px;
     margin: auto;
@@ -117,9 +107,8 @@ header {
 }
 
 #info-contents {
-    width: 30%;
-    display: inline;
-    float: right;
+    width: 100%;
+    display: block;
 }
 
 #logo {
@@ -161,6 +150,21 @@ button:hover {
     text-align: center;
 }
 
+//////////////Curiousity Pane /////////
+
+#guide-button-div {
+  .curious-img {
+    width: 100%;
+  }
+  .curious-description {
+    color: $dark-blue;
+  }
+  .curious-type {
+    color: $dark-green;
+    font-weight: 300;
+  }
+}
+
 
 //////ADD FORM STYLES
 #{$all-text-inputs} {
@@ -171,8 +175,6 @@ button:hover {
 }
 
 form {
-  line-height: 3em;
-
   p {
     margin: 0;
     line-height: 1.5em;
@@ -254,3 +256,50 @@ form {
   border: 2px solid red !important;
   @include border-radius;
 }
+
+
+/////////// MEDIA QUERIES  ////////////////
+@media screen and (min-width: 500px){
+  html{
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 800px){
+  html{
+    font-size: 16px;
+  }
+    .info-dropdown {
+    height: 90vh;
+  }
+    #info-contents {
+    width: 30%;
+  }
+  #google-map {
+    width: 70%;
+  }
+  #info-contents {
+    width: 30%;
+    display: inline;
+    float: right;
+  }
+
+}
+
+@media screen and (min-width: 1200px){
+  html{
+    font-size: 16px;
+  }
+  #info-contents {
+    width: 25%;
+  }
+  #google-map {
+    width: 75%;
+  }
+  form {
+    line-height: 3em;
+  }
+  
+
+}
+
