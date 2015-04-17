@@ -8,8 +8,8 @@ var scoutMap = Backbone.Model.extend({
 		console.log(map);
 		console.log(self.map);
 		var locationFlag = new markersView({map: map});
-		//var curiousButtons = new Buttons();
-		var Sidebar = new sidebars();
+		var curiousButtons = new Buttons();
+		//var Sidebar = new sidebars();
 		console.log('here is location flag');
 		console.log(locationFlag);
 		console.log(locationFlag.placeMarker);
@@ -89,7 +89,7 @@ var scoutMap = Backbone.Model.extend({
 
 });
 
-
+/*
 var scoutMapView = Backbone.View.extend({
 	model: this.model,
 	events: {
@@ -109,4 +109,4 @@ var scoutMapView = Backbone.View.extend({
 
 
 })
-
+*/
