@@ -30,9 +30,31 @@ var sidebars = Backbone.View.extend({
 		
 		addLoc = "<div id=\"add-button-div\" class=\"info-dropdown center\">\
 			<h2>Add a new location</h2>\
-			<div>Select Image<input type='file' id='photoInput'></div><br>\
-			<div>Location Name<input type='text'></div><br>\
-			<button id='save' type='button'>Save!</button>\
+			<form>\
+				<input type='text' name='location-name' placeholder='Location name'>\
+				<br>\
+				<textarea id='description' name='location-description' maxlength='140' placeholder='Description'></textarea>\
+				<br>\
+				<select name='oddity-type'>\
+				<option value='Unspecified'>Category</option>\
+				<option value='Art'>Art</option>\
+				<option value='Nature'>Nature</option>\
+				<option value='Architecture'>Architecture</option>\
+				<option value='Other'>Other</option>\
+				</select>\
+				<p>Select image<br>\
+				</p>\
+				<!--\
+				HOPING TO MAKE THIS DECORATIVE\
+				<div class='fileUpload'>\
+    				<span>Upload</span>\
+    				<input placeholder='choose file' type='file' class='form-button'>\
+				</div>\
+				-->\
+				<input type='file' class='form-button'>\
+				<br>\
+				<input type='submit' class='center' value='Submit'>\
+			</form>\
 		</div>";
 
 		if (opts == 'guide') {
