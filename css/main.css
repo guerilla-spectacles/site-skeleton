@@ -50,16 +50,17 @@ header {
   height: 90vh;
   display: inline-block; }
 
-.info-dropdown {
-  overflow: scroll;
-  padding: 20px 40px;
-  margin: auto;
-  text-align: center;
-  background-color: white; }
-
 #info-contents {
+  min-width: 300px;
   width: 100%;
-  display: block; }
+  display: block;
+  height: 50vh; }
+  #info-contents .info-dropdown {
+    overflow: scroll;
+    padding: 20px 40px;
+    width: 100%;
+    text-align: center;
+    background-color: white; }
 
 #logo {
   width: 50%;
@@ -175,26 +176,22 @@ form input[type="file"] {
   border: 2px solid red !important;
   border-radius: 5px; }
 
-@media screen and (min-width: 500px) {
-  html {
-    font-size: 14px; } }
-@media screen and (min-width: 800px) {
-  html {
-    font-size: 16px; }
-
+@media screen and (min-width: 600px) {
   .info-dropdown {
     height: 90vh; }
 
-  #info-contents {
-    width: 30%; }
-
   #google-map {
-    width: 70%; }
+    width: 65%;
+    float: left; }
 
   #info-contents {
-    width: 30%;
+    width: 34.9%;
     display: inline;
-    float: right; } }
+    float: right;
+    height: 90vh; }
+
+  form {
+    line-height: 3em; } }
 @media screen and (min-width: 1200px) {
   html {
     font-size: 16px; }
@@ -203,9 +200,6 @@ form input[type="file"] {
     width: 25%; }
 
   #google-map {
-    width: 75%; }
-
-  form {
-    line-height: 3em; } }
+    width: 75%; } }
 
 /*# sourceMappingURL=main.css.map */

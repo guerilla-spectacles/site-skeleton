@@ -107,17 +107,21 @@ header {
     display: inline-block;
 }
 
-.info-dropdown {
+
+
+#info-contents {
+  min-width: 300px;
+    width: 100%;
+    display: block;
+    height: 50vh;
+    .info-dropdown {
     overflow: scroll;
     padding: 20px 40px;
-    margin: auto;
+    width: 100%;
+    // margin: auto;
     text-align: center;
     background-color: white;
 }
-
-#info-contents {
-    width: 100%;
-    display: block;
 }
 
 #logo {
@@ -277,29 +281,31 @@ form {
 }
 
 /////////// MEDIA QUERIES  ////////////////
-@media screen and (min-width: 500px){
-  html{
-    font-size: 14px;
-  }
-}
+// @media screen and (min-width: 500px){
+//   html{
+//     font-size: 14px;
+//   }
+// }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 600px){
   html{
-    font-size: 16px;
+    // font-size: 16px;
   }
     .info-dropdown {
     height: 90vh;
   }
-    #info-contents {
-    width: 30%;
-  }
   #google-map {
-    width: 70%;
+    width: 65%;
+    float: left;
   }
   #info-contents {
-    width: 30%;
+    width: 34.9%;
     display: inline;
     float: right;
+    height: 90vh;
+  }
+    form {
+    line-height: 3em;
   }
 
 }
@@ -314,9 +320,7 @@ form {
   #google-map {
     width: 75%;
   }
-  form {
-    line-height: 3em;
-  }
+
   
 
 }
