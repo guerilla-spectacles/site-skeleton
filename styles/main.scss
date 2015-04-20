@@ -28,6 +28,11 @@
 }
 // @include standard-margin;
 
+@mixin active-style {
+  outline: none;
+  border: 0;
+}
+
 /////////// VARIABLES ////////////////
 $blue: #00C7DE;
 $dark-blue: #005A6C;
@@ -75,6 +80,10 @@ p {
 .center {
     margin-left: auto;
     margin-right: auto;
+}
+
+button:focus {
+  @include active-style;
 }
 
 header {
@@ -174,6 +183,7 @@ button:hover {
   padding: 10px;
 }
 
+
 form {
   p {
     margin: 0;
@@ -184,7 +194,12 @@ form {
     height: 2.5em;
     @include border-radius;
     @include standard-margin;
+    @include active-style;
   };
+  input[type="text"]:focus {
+    background-color: $light-green;
+
+  }
   input[type="file"] {
     text-align: center;
     button {
@@ -197,6 +212,10 @@ form {
   textarea {
     border: none;
     background-color: $light-blue;
+  }
+  textarea:focus {
+    background-color: $light-green;
+    @include active-style;
   }
   #description {
     padding: 10px;
@@ -257,9 +276,6 @@ form {
   @include border-radius;
 }
 
-
-<<<<<<< HEAD
-=======
 /////////// MEDIA QUERIES  ////////////////
 @media screen and (min-width: 500px){
   html{
@@ -304,5 +320,3 @@ form {
   
 
 }
-
->>>>>>> master
