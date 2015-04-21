@@ -175,7 +175,6 @@ form input[type="file"] {
   color: #4272db; }
 
 #markerLayer img {
-  border: 2px solid red !important;
   border-radius: 5px; }
 
 @media screen and (min-width: 600px) {

@@ -70,7 +70,7 @@ var scoutMap = Backbone.Model.extend({
 		      	position: pos,
 		      	icon: 'img/you-are-here.png',
 		      	id: 'usersLocation',
-		      	animation: google.maps.Animation.BOUNCE,
+		      	animation: google.maps.Animation.DROP,
 		      })
 
 		    }, function() {
