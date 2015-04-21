@@ -53,7 +53,7 @@ $dark-green: #29C2B0;
 body {
 	background-color: $dark-green;
 	font-family: 'Open Sans', sans-serif;
-  // font-size: 13px;;
+  font-size: 13px;
 }
 
 *, *:before, *:after {
@@ -81,6 +81,7 @@ p {
     margin-left: auto;
     margin-right: auto;
 }
+
 
 button:focus {
   @include active-style;
@@ -110,10 +111,11 @@ header {
 
 
 #info-contents {
-  min-width: 300px;
+  // min-width: 300px;
     width: 100%;
-    display: block;
+    display: inline-block;
     height: 50vh;
+    right: 0;
     .info-dropdown {
     overflow: scroll;
     padding: 20px 40px;
@@ -215,6 +217,7 @@ form {
   }
   textarea {
     border: none;
+    resize: none;
     background-color: $light-blue;
   }
   textarea:focus {
@@ -299,7 +302,7 @@ form {
     float: left;
   }
   #info-contents {
-    width: 34.9%;
+    width: 35%;
     display: inline;
     float: right;
     height: 90vh;
@@ -312,7 +315,7 @@ form {
 
 @media screen and (min-width: 1200px){
   html{
-    font-size: 16px;
+    // font-size: 16px;
   }
   #info-contents {
     width: 25%;
@@ -320,7 +323,4 @@ form {
   #google-map {
     width: 75%;
   }
-
-  
-
 }
