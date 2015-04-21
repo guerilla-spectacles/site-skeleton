@@ -1,3 +1,11 @@
+var Marker = Backbone.Model.extend({
+
+});
+
+var MapLocs = Backbone.Collection.extend({
+  model: Marker
+});
+
 var markersView = Backbone.View.extend({
 
 	initialize: function(opts){
