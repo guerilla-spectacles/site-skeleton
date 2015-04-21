@@ -16,7 +16,7 @@ var markersView = Backbone.View.extend({
 	render: function(){
     var locations = [
 		['Spot 1', 'This is spot 1. Blah blah. #this #that', 'undefined', 'undefined', 'undefined', 45.5136190, -122.6520430, 'img/map-marker-image.png'],
-		['Spot 2', 'This is spot 2. Beep boop. #beep #boop', 'undefined', 'undefined', 'undefined', 45.5196190, -122.6590430, 'img/map-marker-selected.png'],
+		['Spot 2', 'This is spot 2. Beep boop. #beep #boop', 'undefined', 'undefined', 'undefined', 45.5196190, -122.6590430, 'img/map-marker-image.png'],
         ['Spot 3', 'This is spot 3. Blah blah. #this #that', 'undefined', 'undefined', 'undefined', 45.5316190, -122.6320430, 'img/map-marker-image.png'],
         ['Spot 4', 'This is spot 4. Beep boop. #beep #boop', 'undefined', 'undefined', 'undefined', 45.517555,  -122.631819, 'img/map-marker-image.png']
     ];
@@ -38,7 +38,7 @@ var markersView = Backbone.View.extend({
             id: 'markerLayer'
         });
       // ADDS INFO WINDOW TO MARKER  
-      // link = '';            bindInfoWindow(marker, map, locations[i][0], description, telephone, email, web, link);
+      link = '';            bindInfoWindow(marker, map, locations[i][0], description, telephone, email, web, link);
       var myoverlay = new google.maps.OverlayView();
      	myoverlay.draw = function () {
         this.getPanes().markerLayer.id='markerLayer';

@@ -21,7 +21,7 @@ var scoutMap = Backbone.Model.extend({
 	},
 
 	render: function(){
-  		var myIcon='https://mapbuildr.com/assets/img/markers/hollow-pin-black.png';
+  		// var myIcon='https://mapbuildr.com/assets/img/markers/hollow-pin-black.png';
 			var mapProp = {
 			    //center:new google.maps.LatLng(45.517534,-122.648507),
 			    zoom:14,
@@ -68,8 +68,9 @@ var scoutMap = Backbone.Model.extend({
 		      var userLocation = new google.maps.Marker({
 		      	map: map,
 		      	position: pos,
-		      	icon: 'img/map-marker-selected.png',
-		      	id: 'usersLocation'
+		      	icon: 'img/you-are-here.png',
+		      	id: 'usersLocation',
+		      	animation: google.maps.Animation.BOUNCE,
 		      })
 
 		    }, function() {
