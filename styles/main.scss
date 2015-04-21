@@ -28,6 +28,11 @@
 }
 // @include standard-margin;
 
+@mixin active-style {
+  outline: none;
+  border: 0;
+}
+
 /////////// VARIABLES ////////////////
 $blue: #00C7DE;
 $dark-blue: #005A6C;
@@ -48,7 +53,7 @@ $dark-green: #29C2B0;
 body {
 	background-color: $dark-green;
 	font-family: 'Open Sans', sans-serif;
-  // font-size: 13px;;
+  font-size: 13px;
 }
 
 *, *:before, *:after {
@@ -77,6 +82,11 @@ p {
     margin-right: auto;
 }
 
+
+button:focus {
+  @include active-style;
+}
+
 header {
   // padding: auto 20px;
   height: 10vh;
@@ -98,17 +108,22 @@ header {
     display: inline-block;
 }
 
-.info-dropdown {
+
+
+#info-contents {
+  // min-width: 300px;
+    width: 100%;
+    display: inline-block;
+    height: 50vh;
+    right: 0;
+    .info-dropdown {
     overflow: scroll;
     padding: 20px 40px;
-    margin: auto;
+    width: 100%;
+    // margin: auto;
     text-align: center;
     background-color: white;
 }
-
-#info-contents {
-    width: 100%;
-    display: block;
 }
 
 #logo {
@@ -174,6 +189,7 @@ button:hover {
   padding: 10px;
 }
 
+
 form {
   p {
     margin: 0;
@@ -184,7 +200,12 @@ form {
     height: 2.5em;
     @include border-radius;
     @include standard-margin;
+    @include active-style;
   };
+  input[type="text"]:focus {
+    background-color: $light-green;
+
+  }
   input[type="file"] {
     text-align: center;
     button {
@@ -196,7 +217,12 @@ form {
   }
   textarea {
     border: none;
+    resize: none;
     background-color: $light-blue;
+  }
+  textarea:focus {
+    background-color: $light-green;
+    @include active-style;
   }
   #description {
     padding: 10px;
@@ -257,40 +283,39 @@ form {
   @include border-radius;
 }
 
-
-<<<<<<< HEAD
-=======
 /////////// MEDIA QUERIES  ////////////////
-@media screen and (min-width: 500px){
-  html{
-    font-size: 14px;
-  }
-}
+// @media screen and (min-width: 500px){
+//   html{
+//     font-size: 14px;
+//   }
+// }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 600px){
   html{
-    font-size: 16px;
+    // font-size: 16px;
   }
     .info-dropdown {
     height: 90vh;
   }
-    #info-contents {
-    width: 30%;
-  }
   #google-map {
-    width: 70%;
+    width: 65%;
+    float: left;
   }
   #info-contents {
-    width: 30%;
+    width: 35%;
     display: inline;
     float: right;
+    height: 90vh;
+  }
+    form {
+    line-height: 3em;
   }
 
 }
 
 @media screen and (min-width: 1200px){
   html{
-    font-size: 16px;
+    // font-size: 16px;
   }
   #info-contents {
     width: 25%;
@@ -298,11 +323,4 @@ form {
   #google-map {
     width: 75%;
   }
-  form {
-    line-height: 3em;
-  }
-  
-
 }
-
->>>>>>> master

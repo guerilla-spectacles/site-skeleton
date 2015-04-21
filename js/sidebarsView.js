@@ -31,7 +31,7 @@ var sidebars = Backbone.View.extend({
 		addLoc = "<div id=\"add-button-div\" class=\"info-dropdown center\">\
 			<h2>Add a new location</h2>\
 			<form>\
-				<input type='text' name='location-name' placeholder='Location name'>\
+				<input type='text' required name='location-name' placeholder='Location name'>\
 				<br>\
 				<textarea id='description' name='location-description' maxlength='140' placeholder='Description'></textarea>\
 				<br>\
@@ -46,7 +46,7 @@ var sidebars = Backbone.View.extend({
 				</p>\
 				<!--\
 				HOPING TO MAKE THIS DECORATIVE\
-				<div class='fileUpload'>\
+				<div class='fileUpload' required>\
     				<span>Upload</span>\
     				<input placeholder='choose file' type='file' class='form-button'>\
 				</div>\
