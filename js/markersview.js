@@ -38,7 +38,7 @@ var markersView = Backbone.View.extend({
             id: 'markerLayer'
         });
       // ADDS INFO WINDOW TO MARKER  
-      link = '';            bindInfoWindow(marker, map, locations[i][0], description, telephone, email, web, link);
+      // link = '';            bindInfoWindow(marker, map, locations[i][0], description, telephone, email, web, link);
       var myoverlay = new google.maps.OverlayView();
      	myoverlay.draw = function () {
         this.getPanes().markerLayer.id='markerLayer';
