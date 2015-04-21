@@ -6,7 +6,8 @@
   src: url("http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,800.eot?#iefix") format("embedded-opentype"), url("http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,800.woff") format("woff"), url("http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,800.ttf") format("truetype"), url("http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,800.svg#Open-Sans") format("svg"); }
 body {
   background-color: #29C2B0;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px; }
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -51,10 +52,10 @@ header {
   display: inline-block; }
 
 #info-contents {
-  min-width: 300px;
   width: 100%;
-  display: block;
-  height: 50vh; }
+  display: inline-block;
+  height: 50vh;
+  right: 0; }
   #info-contents .info-dropdown {
     overflow: scroll;
     padding: 20px 40px;
@@ -126,6 +127,7 @@ form input[type="file"] {
     background-color: blue; }
 form textarea {
   border: none;
+  resize: none;
   background-color: #B5F8FF; }
 form textarea:focus {
   background-color: #75D1C6;
@@ -185,7 +187,7 @@ form input[type="file"] {
     float: left; }
 
   #info-contents {
-    width: 34.9%;
+    width: 35%;
     display: inline;
     float: right;
     height: 90vh; }
@@ -193,9 +195,6 @@ form input[type="file"] {
   form {
     line-height: 3em; } }
 @media screen and (min-width: 1200px) {
-  html {
-    font-size: 16px; }
-
   #info-contents {
     width: 25%; }
 
